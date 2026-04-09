@@ -54,7 +54,7 @@ Mason has shipped working code using these in a real project. Each line cites th
   - `responses.create()` for structured outputs with strict JSON schemas
   - Tool calling for metadata extraction
   - **GPT-5.4** for vision transcription, metadata V1/V2, entity resolution, regeneration
-  - **GPT-4o-mini** for a cheap audit/resync decision step (explicit cost-vs-quality tiering — pay for the model on user-visible work, not on checks)
+  - **GPT-5.4-mini** for a cheap audit/resync decision step (explicit cost-vs-quality tiering — pay for the model on user-visible work, not on checks)
   - Token usage tracking and per-model cost accounting, rate-limit handling
 - **Human-in-the-loop (HITL) pipelines** — designed and shipped the gate in VTR that requires human transcript confirmation before downstream metadata/photo extraction runs
 - **Vision-language prompting** — tuned prompts per document type (letters, envelopes, telegrams, photos) in VTR
