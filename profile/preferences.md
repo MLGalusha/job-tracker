@@ -23,11 +23,20 @@ Mason explicitly does not want to rule things out — he needs a job and is open
 
 - **Environments where coding agents are forbidden.** Not a hard no, but weight strongly against.
 
+## Credentials
+
+- **No college degree.** 6-month UNC Chapel Hill AI Bootcamp (May–December 2024) is Mason's formal credential. No prior professional engineering experience.
+- **Implications for the job-finder skill:**
+  - Soft "Bachelor's preferred" language in a JD is not a blocker — apply anyway, companies routinely take strong candidates without the checkbox.
+  - **Hard** degree requirements ("must have a BS in Computer Science") are deprioritized but not zero'd out; worth a tailored application only if the rest of the role is an exceptionally strong fit and the company is known to be flexible.
+  - Companies with rigid credential filters (typical big-tech intake pipelines, federal contractors, some finance) are effectively filtered out by this rule combined with the skip-lanes list above.
+- Cover letters and resumes should not apologize for the lack of a degree, should not draw attention to it, and should never hedge around it. The bootcamp entry in education stands on its own, and everything else on the resume is concrete shipped work.
+
 ## Location
 
 - **Based in Raleigh, NC.**
 - **Remote, hybrid, and onsite all acceptable.**
-- **Open to relocation** for the right role but I'd prefer not to unless its a really good opportunity that I have a big chance for.
+- **Open to relocation, but the bar is high.** Prefer not to relocate. Only worth a move for a role that is clearly worth it *and* where Mason has strong odds of actually landing the position — don't spend a relocation on a long-shot application.
 
 ## Compensation
 
