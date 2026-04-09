@@ -1,6 +1,6 @@
 # OpenClaw
 
-**Repo:** Personal, not currently public
+**Repo:** `~/Workspace/projects/google-api-tools/` (personal, not currently public). The directory is literally named `google-api-tools` because it also contains a separate Gmail + Calendar OAuth experiment (`auth.js`, `credentials.json`, `token.json`) that's unrelated to OpenClaw — two experiments sharing a folder. OpenClaw-specific state lives in `~/.openclaw/` (Discord token, 4-hour TW session cache, shift-briefing dedup state).
 **Status:** Shipped (for personal daily use). Parent project of Staffclaw.
 **Role:** Solo builder + architect
 **Timeline:** 2025 (predates Staffclaw)
@@ -11,8 +11,17 @@ A personal agent setup that reverse-engineered the undocumented Teamworxs schedu
 ## Why it exists
 The existing Teamworxs app showed a schedule and nothing else. Mason wanted the actual answer to "what is today going to be like?" — staffing, showtimes, projected guest counts — without clicking through three apps every morning. OpenClaw was the one-agent-session experiment that proved the data was reachable; Staffclaw was the eventual "real dashboard" that grew out of it.
 
-## What it actually does
-1. **Reverse-engineered API mapping session.** In a single Claude Code / agent session, Mason had the agent crawl the Teamworxs frontend and enumerate its network traffic to produce a map of **92 undocumented API endpoints**, including manager-only routes Mason did not himself have access to through the UI. This is the anecdote from his first published LinkedIn post.
+## What it actually does (core files, verified from source)
+- `teamworxs-api-summary.js` (341 LOC) — Teamworxs API reconnaissance + summary generator
+- `alamo-api-summary.js` (350 LOC) — Alamo Drafthouse public site scraping (showtimes, ticket sales)
+- `auto-shift-briefing.js` (488 LOC) — the Discord auto-poster (cron-friendly; sets `process.exitCode = 0` on errors so cron doesn't retry on transient failures)
+- `shift-report.js` — full briefing via Puppeteer when the API path doesn't suffice
+- `tw-daily-brief.js`, `tw-weekly-schedule-report.js`, `tw-hours-worked-report.js`, `tw-shift-reminder-message.js` — report generators
+- `scripts/teamworxs/tw-shared.js` — shared Teamworxs client with session caching
+- **Session cache:** `~/.openclaw/workspace/tw-session.json` (4-hour TTL)
+- **Dedup state:** `~/.openclaw/workspace/shift-briefing-state.json` (prevents duplicate Discord sends)
+
+1. **Reverse-engineered API mapping session.** In a single Claude Code / agent session, Mason had the agent crawl the Teamworxs frontend and enumerate its network traffic to produce a map of **92 undocumented API endpoints** across Teamworxs + the Alamo Drafthouse public site, including manager-only routes Mason did not himself have access to through the UI. This is the anecdote from his first published LinkedIn post.
 2. **Dual data source ingestion.** Parallel scraping of:
    - Teamworxs (schedule, coworkers, shifts, assignments)
    - The Alamo Drafthouse public site (showtimes, ticket sales, projected house fill per auditorium)

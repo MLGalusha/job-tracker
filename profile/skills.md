@@ -22,7 +22,7 @@ Mason has shipped working code using these in a real project. Each line cites th
 
 - **TypeScript** — Voices That Remain (~15.6k LOC, 547 commits, live); Staffclaw
 - **Python** — PianoTranscriber (~30.7k LOC, bootcamp capstone); Truth Engine (~14k LOC); line-finder
-- **JavaScript** — google-api-tools (Node CommonJS scripts)
+- **JavaScript** — OpenClaw / google-api-tools (Node CommonJS scripts)
 - **SQL** — VTR (Postgres with Drizzle); Staffclaw (Postgres with Drizzle)
 - **HTML / CSS** — VTR frontend; Staffclaw frontend
 
@@ -88,8 +88,8 @@ Mason has shipped working code using these in a real project. Each line cites th
 ### Reverse-engineering / integration
 
 - **Reverse-engineered undocumented APIs at scale** — OpenClaw (mapped **92 API endpoints across two sites — Teamworxs + the Alamo Drafthouse public site — in one agent session**, including manager-only routes Mason didn't have UI access to); Staffclaw (the full-stack dashboard built on top of that API map)
-- **Puppeteer** scraping — google-api-tools
-- **OAuth / Google Sheets API** — google-api-tools
+- **Puppeteer** scraping — OpenClaw (Alamo Drafthouse public site, full shift-report path)
+- **Google OAuth (Gmail + Calendar scopes)** — small standalone experiment in the same `google-api-tools` directory; not wired into OpenClaw, not shipped as a user-facing feature. Enough to claim familiarity with the Google API OAuth flow, not more.
 - **Google Cloud Vision API** — line-finder
 - **Kraken OCR** (line segmentation) — line-finder
 
