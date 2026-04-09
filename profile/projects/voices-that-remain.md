@@ -50,7 +50,7 @@ This is the most interesting technical part of the project. It's a multi-stage v
 - **Prompting:** Context-aware — collection metadata, page numbers, and date hints are injected into the prompt to give the model the best chance on historical handwriting
 - **Output:** raw transcript text, stored for human review
 
-**Cost-tiered model selection across the pipeline.** Transcription, metadata V1/V2, entity resolution, and regeneration all run on GPT-5.4 where quality matters; a cheap GPT-4o-mini "audit/resync" step is used for lower-stakes decisions. This is an explicit cost-vs-quality split — pay for the model on work that's user-visible, not on checks.
+**Cost-tiered model selection across the pipeline.** Transcription, metadata V1/V2, entity resolution, and regeneration all run on GPT-5.4 where quality matters; a cheap GPT-5.4-mini "audit/resync" step is used for lower-stakes decisions. This is an explicit cost-vs-quality split — pay for the model on work that's user-visible, not on checks.
 
 ### Stage 2 — Human-in-the-loop verification gate
 - **A human must confirm the transcript in the admin UI before downstream metadata extraction runs.** This is an explicit architectural choice, not a nice-to-have — nothing goes public until it's been verified.

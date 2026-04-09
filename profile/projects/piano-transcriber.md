@@ -1,9 +1,9 @@
 # PianoTranscriber (bootcamp capstone)
 
-**Repo:** `~/Workspace/archive/bootcamp/github/PianoTranscriber/`
+**Repo:** `~/Workspace/archive/bootcamp/github/PianoTranscriber/` (public: [github.com/MLGalusha/PianoTranscriber](https://github.com/MLGalusha/PianoTranscriber))
 **Status:** Completed capstone, paused post-bootcamp
 **Role:** Primary builder (nominally a group project; Mason did the majority of the work)
-**Timeline:** May – December 2024, UNC Chapel Hill AI bootcamp (6 months)
+**Timeline:** May – December 2024, UNC Chapel Hill AI bootcamp (6 months). The capstone itself was a **two-week sprint** at the end of the program; training ran ~**1 full week** on a Google Compute Engine GPU VM inside that window.
 **Scale:** ~30,700 lines of Python (notebooks, data scripts, model, pipeline), 62 commits
 
 ## One-liner
@@ -43,6 +43,7 @@ Bootcamp capstone. Mason chose the project because he wanted hands-on experience
 
 ## Limitations / what he'd do differently
 - Model accuracy needed more work; the pipeline was complete but the CNN was not state-of-the-art for this task. Modern approaches would use a transformer-based encoder.
+- **Real-time capture / UI integration was scoped out of the graded timeline.** The end-to-end offline pipeline (audio file → MIDI → sheet music) worked; a live microphone path was planned and documented but not shipped inside the two-week window.
 - Not actively maintained post-bootcamp.
 
 ## Interview talking points

@@ -1,6 +1,6 @@
 # Truth Engine (paused)
 
-**Repo:** `~/Workspace/archive/truth-engine/`
+**Repo:** `~/Workspace/archive/truth-engine/` (public: [github.com/MLGalusha/SonicGen](https://github.com/MLGalusha/SonicGen))
 **Status:** Paused — v1 dedup engine works end-to-end; v2 roadmap documented in `NEXT.txt`; paused for cost/scale reasons and because VTR took priority
 **Role:** Solo builder + architect
 **Timeline:** Sep 2025 – Oct 2025 (most recent commit Oct 14, last touch Oct 23)
@@ -34,6 +34,7 @@ The ultimate idea behind Truth Engine: make it impossible to take public-figure 
 ### Supporting subsystems
 - **`youtube_api.py`** (~180 LOC) — YouTube Data API v3 (official, not yt-dlp scraping) for channel enumeration and metadata
 - **`download.py`** (~210 LOC) — yt-dlp + FFmpeg for audio extraction, then upload to GCS
+- **Restartable, state-driven batch ingestion.** The pipeline prompts for a YouTube handle, enumerates the channel, and walks videos through explicit status flags (`pending → downloaded → fingerprinted → deduped`) with upserts on every transition. A crashed or killed run resumes cleanly without redoing completed work — important when ingesting hundreds of hours of audio over a slow network.
 - **`supabase_utils.py`** (~247 LOC) — typed wrappers for the fingerprint tables, batched inserts, noisy-hash filtering
 - **`speech_brain.py`** (~55 LOC) — ECAPA-VoxCeleb speaker embeddings into Pinecone. **This is an isolated experiment**, not wired into the main dedup pipeline. Worth mentioning but not claiming as part of the shipped system.
 

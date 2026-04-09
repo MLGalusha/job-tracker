@@ -27,7 +27,7 @@ Self-taught AI-native engineer. I build systems to solve problems I actually exp
 **voicesthatremain.com** · Shipped to production March 2026
 
 - Designed and shipped a full-stack AI archive for historical personal letters, built solo with coding agents. TypeScript end to end (React 19, Express, Drizzle, Postgres), ~15,600 LOC, 547+ commits, live deployment on GCP.
-- Built a multi-stage vision pipeline on the OpenAI Responses API with strict structured outputs and tool calling: GPT-5.4 for transcription, metadata extraction, and entity resolution; GPT-4o-mini for a cheap audit/resync step as a cost-tiered optimization. Sharp-based image preprocessing, context-aware transcription prompts, **human-in-the-loop verification gate** before metadata extraction, and per-document-type prompts tuned separately for letters, envelopes, telegrams, and photos.
+- Built a multi-stage vision pipeline on the OpenAI Responses API with strict structured outputs and tool calling: GPT-5.4 for transcription, metadata extraction, and entity resolution; GPT-5.4-mini for a cheap audit/resync step as a cost-tiered optimization. Sharp-based image preprocessing, context-aware transcription prompts, **human-in-the-loop verification gate** before metadata extraction, and per-document-type prompts tuned separately for letters, envelopes, telegrams, and photos.
 - Deployed on Google Cloud: Cloud Run (backend + frontend), Cloud SQL, Cloud Build (CI/CD), Cloud Storage (archive bucket). Drizzle migration journal coordinated with the deploy pipeline for zero-downtime schema changes.
 - Testing via Playwright (E2E smoke tests on PR) and Vitest.
 - Started the project in late January 2026 and built it part-time while working a full-time cooking job; quit the cooking job in March 2026 and shipped the majority of the remaining production work in the roughly three most productive weeks that followed.
@@ -55,7 +55,7 @@ Self-taught AI-native engineer. I build systems to solve problems I actually exp
 
 **Backend:** Node.js, Express, Drizzle ORM, Postgres, Pino, session auth
 
-**AI / ML:** OpenAI Responses API (GPT-5.4 + GPT-4o-mini tiered use, strict structured outputs, tool calling, vision input), HITL pipeline design, PyTorch, librosa, custom audio fingerprinting, spectrogram processing, CNN training on real datasets, GCP GPU training
+**AI / ML:** OpenAI Responses API (GPT-5.4 + GPT-5.4-mini tiered use, strict structured outputs, tool calling, vision input), HITL pipeline design, PyTorch, librosa, custom audio fingerprinting, spectrogram processing, CNN training on real datasets, GCP GPU training
 
 **Cloud / infra:** Google Cloud Platform (Cloud Run, Cloud SQL, Cloud Build, Cloud Storage), zero-downtime Postgres migrations, Cloud Build CI/CD
 

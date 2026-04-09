@@ -87,7 +87,7 @@ Mason has shipped working code using these in a real project. Each line cites th
 
 ### Reverse-engineering / integration
 
-- **Reverse-engineered undocumented APIs at scale** — Staffclaw (Teamworxs schedule API); google-api-tools (mapped 92 API endpoints across two sites in one agent session, including manager-only routes)
+- **Reverse-engineered undocumented APIs at scale** — OpenClaw (mapped **92 API endpoints across two sites — Teamworxs + the Alamo Drafthouse public site — in one agent session**, including manager-only routes Mason didn't have UI access to); Staffclaw (the full-stack dashboard built on top of that API map)
 - **Puppeteer** scraping — google-api-tools
 - **OAuth / Google Sheets API** — google-api-tools
 - **Google Cloud Vision API** — line-finder
