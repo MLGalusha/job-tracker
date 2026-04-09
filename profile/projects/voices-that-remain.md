@@ -45,10 +45,12 @@ A family friend had spent years collecting historical personal letters — love 
 This is the most interesting technical part of the project. It's a multi-stage vision pipeline with a human-in-the-loop gate.
 
 ### Stage 1 — Transcription
-- **Model:** OpenAI GPT-4o Vision via the Responses API
+- **Model:** OpenAI GPT-5.4 via the Responses API (vision input)
 - **Preprocessing:** Sharp for smart resize (2000px max) + JPEG encoding for consistency across heterogeneous scan sources
 - **Prompting:** Context-aware — collection metadata, page numbers, and date hints are injected into the prompt to give the model the best chance on historical handwriting
 - **Output:** raw transcript text, stored for human review
+
+**Cost-tiered model selection across the pipeline.** Transcription, metadata V1/V2, entity resolution, and regeneration all run on GPT-5.4 where quality matters; a cheap GPT-4o-mini "audit/resync" step is used for lower-stakes decisions. This is an explicit cost-vs-quality split — pay for the model on work that's user-visible, not on checks.
 
 ### Stage 2 — Human-in-the-loop verification gate
 - **A human must confirm the transcript in the admin UI before downstream metadata extraction runs.** This is an explicit architectural choice, not a nice-to-have — nothing goes public until it's been verified.

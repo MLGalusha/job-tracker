@@ -12,7 +12,7 @@ Concrete evidence of capability, stated in a form drafting skills can lift verba
 
 ## ML / infra depth
 - **Trained a CNN on the MAESTRO dataset (~200 hours of classical piano, ~100GB preprocessed)** for real-time audio-to-MIDI transcription (bootcamp capstone, 2024). PyTorch, custom spectrogram preprocessing (11ms resolution), sliding-window architecture, GPU training on GCP VMs, end-to-end pipeline: audio → spectrogram → CNN → MIDI → sheet music via MuseScore. ~30.7k lines of Python, 62 commits.
-- **Wrote a Shazam-style audio fingerprinting engine from scratch** as the first stage of Truth Engine. Custom constellation-hash peak detection (configurable sample rate, FFT size, peak neighborhood, fan value, frame delta), adaptive tiered-percentage matching for speed, Supabase storage. ~14k lines of Python.
+- **Wrote a Shazam-style audio fingerprinting engine from scratch** as the first stage of Truth Engine. Custom constellation-hash peak detection on log-power spectrograms (16 kHz, 2048 FFT, 256 hop, 80–500 Hz speech band, 25×25 maximum-filter neighborhood, -30 dB floor, fan value 3, max Δt 400 frames, SHA-1 short hashes of `freq1|freq2|Δt`). Matching is alignment-offset based: for a candidate clip, collect all (t_ref − t_query) offsets per video, take `Counter.most_common(1)`, and call it a match when `min_aligned_matches ≥ 18` and `min_alignment_ratio ≥ 0.4`. Supabase storage, noisy-hash filtering. ~14k lines of Python.
 - **Bootcamp:** UNC Chapel Hill AI bootcamp, 6 months, May–December 2024. Did the majority of the capstone solo despite nominal group structure.
 
 ## Delivery under constraint
