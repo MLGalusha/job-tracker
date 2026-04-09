@@ -19,7 +19,7 @@ What Mason is looking for and what to filter out. Used by `job-finder`, `company
 
 ## Dealbreakers
 
-Mason explicitly does not want to rule things out — he needs a job and is open to pretty much any real engineering role. Treat this section as *soft* preferences, not hard filters. The only thing approaching a real dealbreaker:
+Mason explicitly does not want to rule things out — he needs a job and is open to pretty much any real engineering role. Treat this section as _soft_ preferences, not hard filters. The only thing approaching a real dealbreaker:
 
 - **Environments where coding agents are forbidden.** Not a hard no, but weight strongly against.
 
@@ -27,7 +27,7 @@ Mason explicitly does not want to rule things out — he needs a job and is open
 
 - **Based in Raleigh, NC.**
 - **Remote, hybrid, and onsite all acceptable.**
-- **Open to relocation** for the right role, but no preference for it.
+- **Open to relocation** for the right role but I'd prefer not to unless its a really good opportunity that I have a big chance for.
 
 ## Compensation
 
