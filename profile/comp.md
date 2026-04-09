@@ -1,24 +1,29 @@
 # Compensation expectations
 
-**Status:** Initial draft written by Claude on 2026-04-09 because Mason has never worked a tech job and doesn't have personal data to anchor to. These numbers are a reasoned starting position, not a hard rule. **Mason should revise this file once he has two or three real offers or recruiter conversations to calibrate against.**
+**Status:** First-draft numbers written by Claude on 2026-04-09. Mason has no prior tech employment to anchor to, and Claude's original draft was too optimistic; this is the honest rebuild. **Revise after the first 2–3 real recruiter conversations.**
 
-**Rule for drafting skills:** when an application form asks for compensation, use the **target base** from this file. When a recruiter asks on a call, use the **target base** as the headline and the **floor** as the no-go. Never volunteer the floor first.
+**Rule for drafting skills:** when an application form asks for comp, use the **target base**. On recruiter calls, lead with the target range and never volunteer the floor first. If the recruiter anchors low, ask for their band before counter-anchoring.
 
 ---
 
-## Target: $120,000 – $150,000 base
+## Target: $90,000 – $110,000 base
 
-**Stretch (don't ask for, but accept gladly):** $160k+
-**Floor:** $85,000 base
-**Absolute walk-away:** below $75k unless there's a very compelling reason (e.g., a founding role with meaningful equity at a company Mason would pay to work at)
+**Stretch (AI-native companies that specifically value agent-directed engineering):** $115,000 – $130,000
+**Floor:** $70,000 base
+**Absolute walk-away:** below $60,000 unless the role is a top-5 target with a clear growth path or meaningful founding-stage equity
 
-### Reasoning behind the band
+### Reasoning behind the band — the honest version
 
-- **First real engineering role.** No prior tech title on the resume. Market convention would put this at the entry-level band. Raw entry-level engineer in a non-coastal US market in 2026 is roughly $80–110k base.
-- **Demonstrated production work that isn't entry-level.** Mason has shipped a real full-stack AI product solo (VTR), trained a CNN on ~100GB of real audio data (PianoTranscriber), and reverse-engineered an undocumented API at scale (OpenClaw/Staffclaw). That evidence is not entry-level. It justifies pushing the band up by ~$20–40k over pure-entry-level numbers.
-- **Location: Raleigh, NC.** Lower cost of living than SF/NYC/Seattle. Tech salaries in the Triangle are typically 10–20% below coastal bands. **But** — remote AI-native companies often pay close to coastal rates regardless of employee location. Mason should hold coastal-rate expectations for remote AI startup roles.
-- **Agent-directed development is a differentiated skill.** For companies whose hiring thesis explicitly includes "we want engineers who direct coding agents," Mason is closer to senior-level productivity per hour. At those companies the target can lean toward $140–160k.
-- **Financial pressure.** Mason quit his cooking job in March 2026 and is currently unemployed and broke (per `story.md`). This raises the importance of the *floor* as a real number, not a rhetorical one. Time-to-offer matters as much as offer size within reason.
+- **This is a first engineering role.** No prior tech title. No CS degree. A 6-month bootcamp certificate. Hiring funnels default-match this profile to entry-level bands regardless of side-project quality, and 2026 is a tough market for first engineering jobs — post-2023 layoffs, AI-driven hiring compression, and a large supply of bootcamp grads and laid-off juniors competing for the same slots.
+- **Raleigh / Triangle first-role bands in 2026 are roughly:**
+  - Junior SWE at an established Triangle company (Red Hat, Pendo, IQVIA, LexisNexis, IBM, Fidelity tech, etc.): ~$75–95k base
+  - Bootcamp grad without a CS degree at a smaller local company: ~$60–80k base historically
+  - Remote junior/associate at an AI-native startup: ~$85–115k base if you can get past the "years of experience" filter
+  - Founding engineer at pre-seed/Series A: ~$100–140k base + meaningful equity, but these roles usually want people who've shipped *at* a company, not just solo
+- **The shipped evidence is real and does buy a premium — but not $30–50k of premium on a first role.** VTR, PianoTranscriber, and OpenClaw justify aiming at the *top* of the realistic first-role band ($95–110k) instead of the middle, and at AI-native companies they can push into the stretch zone ($115–130k). They do *not* justify anchoring at senior-engineer numbers.
+- **The agent-directed differentiator is real, but it only prices in at companies whose hiring thesis explicitly includes it.** At a traditional Raleigh tech company that just needs a full-stack junior, it's a nice-to-have, not a comp multiplier. At Anthropic/OpenAI/Cognition/YC AI startups, it's closer to a real multiplier and the stretch band applies.
+- **Financial pressure makes the floor a hard number.** Mason quit his cooking job in March 2026 and is unemployed, uninsured, and broke. Time-to-offer matters almost as much as offer size. The $70k floor is "lower than I want, but the income and health insurance unblock life." Below $60k, the math only works if the role is genuinely exceptional.
+- **Why not push the target higher anyway.** Anchoring above market gets you screened out at the recruiter stage before the shipped evidence ever lands in front of a human who could appreciate it. A $130k ask on a role posted at $85–105k terminates the conversation. A $95k ask on the same role keeps the door open and lets the shipped work and the agent-directed angle do the negotiation work later.
 
 ---
 
@@ -50,10 +55,13 @@
 
 ## What to say when asked
 
-- **Application form asks for salary expectation (required field):** enter **$130,000** as a single number (the middle of the target band). If the field requires a range, enter **$120,000–$150,000**.
-- **Recruiter screens on a call:** *"I'm targeting $120–150k base depending on the role and the company. Happy to talk about the full package — equity and benefits matter too."* Do not volunteer the floor.
-- **If the recruiter pushes for a lower anchor:** *"I'm targeting that range based on the scope of work I'd be doing and the kind of companies I'm talking to. I'm open to hearing what your band is for this role."*
-- **If the role is clearly below floor ($75k–$85k):** politely decline or ask if there's equity / growth path that brings total comp up. Don't waste cycles negotiating from far below.
+- **Application form asks for salary expectation (required field, single number):** enter **$100,000** (near the top of the realistic first-role band — leaves room to negotiate up without pricing out of the funnel).
+- **Application form asks for a range:** enter **$90,000 – $110,000**. For AI-native companies specifically, enter **$100,000 – $125,000**.
+- **Recruiter screens on a call:** *"I'm targeting around $90–110k base depending on the role and the company. I'm also very interested in the work itself — happy to talk about the full package."* Do not volunteer the floor.
+- **Recruiter at an AI-native company asks on a call:** *"I'm targeting $100–125k base at AI-native companies specifically — the fit and the work matter more to me than the exact number."* Still don't volunteer the floor.
+- **If the recruiter pushes for a lower anchor first:** *"I'd rather hear your band for this role before I anchor — I'm open to a range of outcomes depending on the role and the team."*
+- **If the role is clearly below floor (<$70k):** don't reflexively decline. Ask whether there's a growth-path story ("is there a documented path from this role to a senior band within 12–18 months?") or equity that meaningfully changes the picture. If the answer is no, politely decline and move on.
+- **If Mason is in week 8+ of the search with no offers:** reassess whether to temporarily lower the floor to $60k to unblock the first-job-at-any-real-company problem. Getting in the door matters.
 
 ---
 
