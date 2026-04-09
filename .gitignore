@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# OAuth / secrets — never commit
+*token*.json
+*credentials*.json
+*.pem
+*.key
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build artifacts
+web/dist/
+*.tsbuildinfo
+
+# Local-only Claude state
+.claude/settings.local.json
