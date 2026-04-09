@@ -90,7 +90,7 @@ Mason has shipped working code using these in a real project. Each line cites th
 - **Reverse-engineered undocumented APIs at scale** — OpenClaw (mapped **92 API endpoints across two sites — Teamworxs + the Alamo Drafthouse public site — in one agent session**, including manager-only routes Mason didn't have UI access to); Staffclaw (the full-stack dashboard built on top of that API map)
 - **Puppeteer** scraping — OpenClaw (Alamo Drafthouse public site, full shift-report path)
 - **Google OAuth (Gmail + Calendar scopes)** — small standalone experiment in the same `google-api-tools` directory; not wired into OpenClaw, not shipped as a user-facing feature. Enough to claim familiarity with the Google API OAuth flow, not more.
-- **Google Cloud Vision API** — line-finder
+- **Google Cloud Vision API** — line-finder (a local Python playground Mason used to prototype handwriting line-segmentation approaches for the VTR transcription pipeline; not shipped on its own)
 - **Kraken OCR** (line segmentation) — line-finder
 
 ---
