@@ -28,7 +28,7 @@
 *Pattern A (story-driven, preferred):* Lead with a real problem Mason experienced or a real thing he shipped, in one or two sentences. Then land the connection to the role.
 
 > Example pattern:
-> "I spent the last three weeks shipping [VTR / Staffclaw / something concrete], which [one-sentence outcome connecting to what this company does]. When I saw [company]'s [specific thing about the role or company], it was the first job posting that made me feel like my whole last year was the training arc for the role you're actually hiring for."
+> "I just shipped [VTR / Staffclaw / something concrete], which [one-sentence outcome connecting to what this company does]. When I saw [company]'s [specific thing about the role or company], it was the first job posting that made me feel like my whole last year was the training arc for the role you're actually hiring for."
 
 *Pattern B (thesis-driven, for more senior or founder-facing roles):* Lead with a short thesis statement about where software is heading, grounded in his own experience.
 

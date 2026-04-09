@@ -8,7 +8,7 @@ The source of truth for this file is the actual shipped code in Mason's projects
 
 ## Core methodology: agent-directed development
 
-Mason's primary way of building software is **directing coding agents** (Claude Code, Codex) to produce production-ready code. He has been a heavy AI user since 2023, directs agents fluently, reviews and understands everything they produce, and has shipped real production software this way — specifically *Voices That Remain*, which went from idea to live deployment in roughly three weeks of focused work.
+Mason's primary way of building software is **directing coding agents** (Claude Code, Codex) to produce production-ready code. He has been a heavy AI user since 2023, directs agents fluently, reviews and understands everything they produce, and has shipped real production software this way — specifically *Voices That Remain*, which he started in late January 2026 and built part-time alongside a full-time cooking job for the first several weeks, then shipped the majority of in the roughly three most productive weeks after quitting that job in March 2026.
 
 This is not a hedge or a caveat. It is the differentiated skill being sold. Every resume should feature it prominently under "Tools & workflow" and in the project bullets. For agent-friendly companies (the target list), this is a positive signal that matches their hiring thesis directly.
 

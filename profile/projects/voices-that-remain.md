@@ -4,14 +4,14 @@
 **Repo:** Private, at `~/Workspace/projects/letter-archive/`
 **Status:** Shipped, live, in active development
 **Role:** Solo builder + architect (agent-directed)
-**Timeline:** January 2026 – present; ~90% built in the ~3 weeks after Mason quit his cooking job in March 2026
+**Timeline:** Late January 2026 – present. Built part-time for ~6 weeks alongside a cooking job, then the majority of the production work landed in the ~3 most productive weeks after Mason quit that job in March 2026.
 **Scale:** ~15,600 lines of TypeScript/TSX, 547+ git commits
 
 ## One-liner
 Digital archive for historical personal letters with an AI-powered transcription and metadata extraction pipeline, human-in-the-loop verification, and full deployment on Google Cloud.
 
 ## Why it exists
-A family friend had spent years collecting historical personal letters — love letters, wartime telegrams, generational family correspondence — and wanted them to be searchable and readable by the public, with a long-term path toward community donations and grants funding the archive. The collection sits around 10,000+ letters and is still growing. Mason took it on in January 2026.
+A family friend had spent years collecting historical personal letters — love letters, wartime telegrams, generational family correspondence — and wanted them to be searchable and readable by the public, with a long-term path toward community donations and grants funding the archive. The collection sits around 10,000+ letters and is still growing. Mason took it on in late January 2026.
 
 ## Architecture (verified from source)
 
@@ -81,7 +81,7 @@ This is the most interesting technical part of the project. It's a multi-stage v
 
 4. **Zero-downtime Postgres migrations in Cloud SQL.** Drizzle's migration journal + Cloud Build's deploy pipeline, coordinated so schema changes don't break the live site during the deploy window.
 
-5. **Shipping the whole thing solo in ~3 weeks of focused work** after months of part-time progress. Full-stack TypeScript, a production AI pipeline, and a GCP deployment — one person, agent-directed.
+5. **Delivering the majority of the production system solo in ~3 weeks of focused work** after ~6 weeks of part-time progress alongside a full-time cooking job. Full-stack TypeScript, a production AI pipeline, and a GCP deployment — one person, agent-directed. Mason started VTR in late January 2026, worked on it part-time through February and early March while holding his day job, then quit in March and shipped most of the remaining work in the three most productive weeks of the project.
 
 ## What Mason would do differently
 *(To be filled in after a reflection pass. Interview gold goes here.)*

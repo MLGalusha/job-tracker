@@ -3,7 +3,7 @@
 Concrete evidence of capability, stated in a form drafting skills can lift verbatim. Numbers, artifacts, outcomes — not vibes.
 
 ## Shipped in production
-- **Voices That Remain** (voicesthatremain.com) — shipped to production in March 2026 after roughly three weeks of focused, full-time work (following months of part-time work while holding a cooking job). Live, deployed on GCP (Cloud Run + Cloud SQL + Cloud Build + Cloud Storage), real users. Built solo with coding agents as primary tools. ~15,600 lines of TypeScript, 547+ git commits.
+- **Voices That Remain** (voicesthatremain.com) — started in late January 2026, built part-time for roughly six weeks while holding a full-time cooking job, then shipped the majority of the production system in the roughly three most productive weeks after quitting that job in March 2026. Live on GCP (Cloud Run + Cloud SQL + Cloud Build + Cloud Storage), real users. Built solo with coding agents as primary tools. ~15,600 lines of TypeScript, 547+ git commits.
 - **Staffclaw** — a full-stack workforce scheduling replacement for Alamo Drafthouse theater staff, built by reverse-engineering the undocumented Teamworxs timekeeping API. Session-based auth, demo mode, Postgres persistence, React frontend. Came directly out of frustration with the existing tool at his day job.
 - **VTR AI pipeline** — production HITL-gated vision pipeline that transcribes handwritten historical letters, extracts metadata (people, places, dates) via OpenAI structured outputs with strict JSON schemas, and writes summaries. Human confirms every step before content goes public.
 

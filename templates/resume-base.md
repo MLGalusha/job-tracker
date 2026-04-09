@@ -30,7 +30,7 @@ Self-taught AI-native engineer. I build systems to solve problems I actually exp
 - Built a multi-stage vision pipeline on OpenAI GPT-4o with strict structured outputs and tool calling: Sharp-based image preprocessing, context-aware transcription prompts, **human-in-the-loop verification gate** before metadata extraction, and per-document-type prompts tuned separately for letters, envelopes, telegrams, and photos.
 - Deployed on Google Cloud: Cloud Run (backend + frontend), Cloud SQL, Cloud Build (CI/CD), Cloud Storage (archive bucket). Drizzle migration journal coordinated with the deploy pipeline for zero-downtime schema changes.
 - Testing via Playwright (E2E smoke tests on PR) and Vitest.
-- Built roughly 90% of the production system in three weeks of focused work after going full-time on engineering in March 2026.
+- Started the project in late January 2026 and built it part-time while working a full-time cooking job; quit the cooking job in March 2026 and shipped the majority of the remaining production work in the roughly three most productive weeks that followed.
 
 ### PianoTranscriber (UNC Chapel Hill AI bootcamp capstone) — 2024
 - Trained a CNN for real-time audio-to-MIDI transcription on the **MAESTRO dataset (~200 hours, ~100GB preprocessed)** using PyTorch on GCP GPU VMs. Custom spectrogram preprocessing at 11 ms resolution, sliding-window architecture (240-frame input, 80-frame overlap). End-to-end pipeline: audio → spectrogram → CNN → MIDI → sheet music.
@@ -73,4 +73,4 @@ Self-taught AI-native engineer. I build systems to solve problems I actually exp
 
 ## Background note
 
-Supported myself through the bootcamp and first year of the post-bootcamp period by working full-time as a cook at Alamo Drafthouse in Raleigh (late 2024 – March 2026). Quit in March 2026 to focus full-time on engineering and shipped the production version of VTR in the three weeks that followed.
+Supported myself through the bootcamp and first year of the post-bootcamp period by working full-time as a cook at Alamo Drafthouse in Raleigh (late 2024 – March 2026). Quit in March 2026 to focus full-time on engineering and delivered the majority of VTR's production work in the roughly three most productive weeks that followed.
