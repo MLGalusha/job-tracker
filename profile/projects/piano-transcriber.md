@@ -35,11 +35,11 @@ Bootcamp capstone. Mason chose the project because he wanted hands-on experience
 6. MIDI → sheet music via MuseScore
 
 ## Hard problems solved
-- **Memory-efficient handling of a ~100GB dataset** during training. Not a problem you face in a notebook tutorial.
+- **Memory-efficient handling of a ~100GB dataset** during training. Not a problem you face in a notebook tutorial. Dataset was chunked into ~130 preprocessed files for out-of-core batching so the training loop could stream through it without blowing GPU or disk memory.
 - **Spectrogram/MIDI alignment** at millisecond precision — getting training pairs correct in time is a non-trivial preprocessing task with real audio.
 - **Sliding-window training architecture** — the decision to train on a 240-frame input window while only predicting the middle 80 frames is an overlap-driven choice that buys stability at inference time.
 - **GCP VM training workflow** — provisioning, dataset transfer, training run management, hyperparameter tuning loop.
-- **Evaluation harness** for a model whose output is a continuous note-on probability matrix, not a classification label.
+- **Evaluation harness** for a model whose output is a continuous note-on probability matrix, not a classification label. Mason also evaluated the model subjectively by listening — rendering the predicted MIDI and comparing it against the original audio. Numeric metrics miss the kind of errors (timing drift, wrong sustain, dropped notes) that are obvious to the ear.
 
 ## Limitations / what he'd do differently
 - Model accuracy needed more work; the pipeline was complete but the CNN was not state-of-the-art for this task. Modern approaches would use a transformer-based encoder.

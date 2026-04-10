@@ -146,6 +146,17 @@ function buildEvent(type: string, flags: Flags): Event {
         ...(flags.summary ? { summary: flags.summary } : {}),
       });
     }
+    case "artifact_shipped": {
+      return Event.parse({
+        id,
+        t,
+        type,
+        app_id: requireFlag(flags, "app_id"),
+        artifact_type: requireFlag(flags, "artifact_type"),
+        url: requireFlag(flags, "url"),
+        summary: requireFlag(flags, "summary"),
+      });
+    }
   }
 }
 

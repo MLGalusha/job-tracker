@@ -12,7 +12,7 @@ Last audited: 2026-04-09 (verified against `gh repo view` + local `git remote`).
 |---|---|---|
 | **Staffclaw** | https://github.com/MLGalusha/staffclaw | Full-stack TS monorepo. Went public after a `prepare repo for public release` scrub. Strongest public evidence of full-stack TypeScript + reverse-engineering work. |
 | **PianoTranscriber** | https://github.com/MLGalusha/PianoTranscriber | Bootcamp capstone. Public. Strongest public evidence of ML / PyTorch / audio work. |
-| **SonicGen** (Truth Engine public snapshot) | https://github.com/MLGalusha/SonicGen | Public-facing version of the Truth Engine work. **Note:** there's also a private `truth-engine` repo that is more current; SonicGen is the safe-to-link version. Last pushed Nov 9 2025. |
+| **SonicGen** | https://github.com/MLGalusha/SonicGen | Standalone audio dedup engine (Shazam-style constellation-hash fingerprinting + alignment-offset matching). Written by hand in Python, no coding agents. Created Oct 23 2025; active work continued through December 2025. The strongest public evidence that Mason can write complex systems by hand. **Primary artifact link for outreach:** https://github.com/MLGalusha/SonicGen/blob/main/DEEP_DIVE.md — a full technical walkthrough plus honest retrospective on the wrong database choice and the unfinished weaknesses. See `profile/projects/sonicgen.md`. |
 | **job-tracker** (this repo) | https://github.com/MLGalusha/job-tracker | The agent-native job search tracker Mason is building. Itself evidence of the workflow. Fine to link in cover letters to agent-friendly companies. |
 
 ## Private — do not link repo, but the work can be referenced other ways
@@ -20,7 +20,7 @@ Last audited: 2026-04-09 (verified against `gh repo view` + local `git remote`).
 | Project | Repo | How to share it |
 |---|---|---|
 | **Voices That Remain** | `github.com/MLGalusha/letter-archive` (private) | **Link the live site instead:** https://voicesthatremain.com. Mason can also screenshare / live-demo the admin UI and pipeline in interviews, including the HITL review flow. The repo stays private because the archive contains real historical letters with PII and because the production credentials are tangled with the code. |
-| **Truth Engine** (current) | `github.com/MLGalusha/truth-engine` (private) | Use the SonicGen link above when a code link is required. Talk about the pipeline freely in interviews. |
+| **truth-engine** (private dev repo for SonicGen) | `github.com/MLGalusha/truth-engine` (private) | This is Mason's local dev repo where SonicGen was originally built. The cleaned-up code lives in the public SonicGen repo above — always link SonicGen, never this. The repo name is a holdover from when Mason intended to keep building Truth Engine on top of the dedup engine. Truth Engine itself has never been built. |
 
 ## Not pushed anywhere (local only)
 

@@ -105,6 +105,14 @@ export const StudyGuideGenerated = Base.extend({
   path: z.string(),
 });
 
+export const ArtifactShipped = Base.extend({
+  type: z.literal("artifact_shipped"),
+  app_id: z.string(),
+  artifact_type: z.enum(["pr", "teardown_post", "tool_or_extension", "eval_or_benchmark", "other"]),
+  url: z.string().url(),
+  summary: z.string(),
+});
+
 export const Event = z.discriminatedUnion("type", [
   ApplicationCreated,
   StatusChanged,
@@ -115,6 +123,7 @@ export const Event = z.discriminatedUnion("type", [
   CoverLetterUpdated,
   ResearchCompleted,
   StudyGuideGenerated,
+  ArtifactShipped,
 ]);
 export type Event = z.infer<typeof Event>;
 
@@ -128,5 +137,6 @@ export const EVENT_TYPES = [
   "cover_letter_updated",
   "research_completed",
   "study_guide_generated",
+  "artifact_shipped",
 ] as const;
 export type EventType = (typeof EVENT_TYPES)[number];

@@ -21,7 +21,7 @@ Mason has shipped working code using these in a real project. Each line cites th
 ### Languages
 
 - **TypeScript** — Voices That Remain (~15.6k LOC, 547 commits, live); Staffclaw
-- **Python** — PianoTranscriber (~30.7k LOC, bootcamp capstone); Truth Engine (~14k LOC); line-finder
+- **Python** — PianoTranscriber (~30.7k LOC, bootcamp capstone); SonicGen (~14k LOC, hand-written audio dedup engine); line-finder
 - **JavaScript** — OpenClaw / google-api-tools (Node CommonJS scripts)
 - **SQL** — VTR (Postgres with Drizzle); Staffclaw (Postgres with Drizzle)
 - **HTML / CSS** — VTR frontend; Staffclaw frontend
@@ -46,7 +46,7 @@ Mason has shipped working code using these in a real project. Each line cites th
 ### Databases
 
 - **PostgreSQL** — VTR (Cloud SQL in production); Staffclaw
-- **Supabase** — Truth Engine (used for fingerprint storage, though flagged as too slow/expensive at scale)
+- **Supabase** — SonicGen (fingerprint storage; Mason concluded Supabase was the wrong backend at scale and can articulate why)
 
 ### AI / ML
 
@@ -60,8 +60,8 @@ Mason has shipped working code using these in a real project. Each line cites th
 - **Vision-language prompting** — tuned prompts per document type (letters, envelopes, telegrams, photos) in VTR
 - **PyTorch** — trained a CNN for real-time piano audio → MIDI transcription in bootcamp capstone (PianoTranscriber)
 - **Audio ML pipeline** — spectrogram extraction, MIDI alignment, sliding-window training (PianoTranscriber)
-- **Audio fingerprinting (Shazam-style)** — wrote a constellation-hash peak-finding pipeline from scratch (Truth Engine)
-- **librosa / scipy audio processing** — PianoTranscriber, Truth Engine
+- **Audio fingerprinting (Shazam-style)** — wrote a constellation-hash peak-finding pipeline from scratch by hand, no coding agents (SonicGen)
+- **librosa / scipy audio processing** — PianoTranscriber, SonicGen
 - **Training on GCP GPUs** — PianoTranscriber (MAESTRO dataset, ~100GB preprocessed)
 
 ### Cloud / infra / deployment
@@ -100,8 +100,9 @@ Mason has shipped working code using these in a real project. Each line cites th
 Mason has used these but they are not in shipped production code. Resume/cover letter may mention as "experience with" or "familiar with." Cannot be claimed as a strength.
 
 - **TensorFlow / Keras** — present alongside PyTorch in the PianoTranscriber repo; PyTorch is the primary, TF was used more exploratorily
-- **SpeechBrain** (speaker diarization) — Truth Engine
-- **YouTube Data API** — Truth Engine (custom scraper)
+- **SpeechBrain** (speaker diarization) — SonicGen (isolated experiment, not integrated)
+- **YouTube Data API v3** — SonicGen (channel enumeration + metadata, official API not yt-dlp scraping)
+- **yt-dlp + FFmpeg** — SonicGen ingestion pipeline
 - **Flask** — line-finder (small utility web app)
 - **music21 / MIDIUtil** — PianoTranscriber MIDI generation
 
@@ -119,7 +120,7 @@ Do **not** put on resumes. Goes to study guides (`interview-prep` skill) only.
 
 - **Directing coding agents to produce production-quality code.** Verified by the existence and scale of VTR as a shipped product built this way.
 - **Reading and reviewing agent output critically.** Mason can read and reason about all the code in his projects and makes hand edits when debugging.
-- **Problem discovery through lived experience.** Every significant project came from a real frustration he had (movie-theater scheduling → Staffclaw; handwritten-letter archive → VTR; misquoting of public figures → Truth Engine). This is a strong trait for founding/early-stage engineering roles.
+- **Problem discovery through lived experience.** Every significant project came from a real frustration he had (movie-theater scheduling → Staffclaw; handwritten-letter archive → VTR; out-of-context clips of public figures → the Truth Engine vision, of which SonicGen is the only built piece). This is a strong trait for founding/early-stage engineering roles.
 - **Architecture + technical decision-making.** From Mason's own LinkedIn bio: "I design the architecture, make the technical decisions, and use AI coding tools to accelerate implementation."
 - **Full-stack TypeScript end to end.** VTR uses the same language from frontend to backend to database schemas.
 - **ML training on real datasets, not toy problems.** 100GB MAESTRO dataset, GPU training, real evaluation.

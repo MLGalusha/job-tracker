@@ -1,16 +1,18 @@
 # Cover letter base — the skeleton
 
-**Purpose:** Source material for every tailored cover letter. The `cover-letter-writer` skill reads this file, `profile/voice.md`, the target `role.md`, and the `company-research.md` (if one exists), then produces a tailored letter for a specific application. This file defines the *shape* and *voice anchors* — every tailored letter is a filled-in version of this skeleton.
+**Purpose:** Source material for every tailored cover letter. The `cover-letter-writer` skill reads this file, `profile/voice.md`, the target `role.md`, and the `company.md` (if one exists), then produces a tailored letter for a specific application. This file defines the *shape* and *voice anchors*. Every tailored letter is a filled in version of this skeleton.
 
 **Rules inherited from `profile/voice.md`:**
 - First person, declarative. "I built", "I designed", "I reverse-engineered".
 - Concrete numbers, not adjectives.
 - No hedging ("passionate," "familiar with," "some experience with" for things he actually shipped).
-- Confident about agent-directed development — never hide it.
-- Story-driven opens, not credential-driven.
+- Confident about agent directed development. Never hide it.
+- Story driven opens, not credential driven.
 - Specific verbs, mixed rhythm, thesis statements that land the point.
 - No self-deprecation.
 - Default formality: 4-5 out of 10 (see voice.md for per-lane dial).
+- **No em-dashes, stacked hyphen compounds, approximation tildes, or pipeline arrows in prose** (voice.md rule #14). This applies to every sentence in the letter.
+- **Never name-drop brand names in prose.** Write *"coding agents as my daily tools"*, not *"Claude Code and Codex as my daily tools"*. Brand names live in the resume skills section, not in narrative writing (voice.md rule #12).
 
 **Structural rules:**
 - Length target: **300–450 words.** Short enough to read in under a minute, long enough to make the case.
@@ -25,15 +27,15 @@
 
 ### Opening paragraph — hook with a concrete thing Mason built, not credentials
 
-*Pattern A (story-driven, preferred):* Lead with a real problem Mason experienced or a real thing he shipped, in one or two sentences. Then land the connection to the role.
+*Pattern A (story driven, preferred):* Lead with a real problem Mason experienced or a real thing he shipped, in one or two sentences. Then land the connection to the role.
 
 > Example pattern:
-> "I just shipped [VTR / Staffclaw / something concrete], which [one-sentence outcome connecting to what this company does]. When I saw [company]'s [specific thing about the role or company], it was the first job posting that made me feel like my whole last year was the training arc for the role you're actually hiring for."
+> "I just shipped [VTR / Staffclaw / something concrete]. It [one sentence outcome connecting to what this company does]. When I saw [company]'s [specific thing about the role or company], it was the first job posting that made me feel like my whole last year was the training arc for the role you're actually hiring for."
 
-*Pattern B (thesis-driven, for more senior or founder-facing roles):* Lead with a short thesis statement about where software is heading, grounded in his own experience.
+*Pattern B (thesis driven, for more senior or founder facing roles):* Lead with a short thesis statement about where software is heading, grounded in his own experience.
 
 > Example pattern:
-> "I think the most valuable engineering skill in 2026 isn't the ability to type code quickly — it's the ability to direct coding agents to produce correct, maintainable systems. I've been training that skill on real production work, and the clearest evidence is [VTR / Staffclaw / specific shipped thing]."
+> "I think the most valuable engineering skill in 2026 isn't the ability to type code quickly. It's the ability to direct coding agents to produce correct, maintainable systems. I've been training that skill on real production work, and the clearest evidence is [VTR / Staffclaw / specific shipped thing]."
 
 ### Body paragraph 1 — the most relevant project, told with numbers
 
@@ -42,18 +44,18 @@
 - Always include at least one number (LOC, commits, dataset size, latency, number of users, number of letters, number of API endpoints — whatever is true and specific).
 - End with a one-sentence bridge connecting the work to the target role.
 
-### Body paragraph 2 — the agent-directed differentiator
+### Body paragraph 2 — the agent directed differentiator
 
 This paragraph is the same in spirit across every cover letter, but the *evidence* rotates based on what the target company would find most compelling.
 
-> Default lines (adapt to voice):
-> "I build primarily by directing coding agents — Claude Code and Codex are my daily tools. I've been a heavy AI user since 2023, before most engineers had touched the tools, and I moved to agent-primary workflow in early 2026 once the tools were good enough to be strictly better than hand-coding. The short version: I shipped VTR solo in about three weeks of focused work, and I don't think I could have done that any other way. I review and own every decision, but the majority of raw typing happens through agents. For a company that's [building with / betting on / already using] agents, that's a meaningful multiplier."
+> Default lines (adapt to voice, never use brand names in the prose):
+> "I build primarily by directing coding agents, and they're my daily tools. I've been a heavy AI user since 2023, before most engineers had touched the tools, and I moved to agent primary workflow in early 2026 once the tools were good enough to be strictly better than hand coding. The short version: I shipped VTR solo in about three weeks of focused work, and I don't think I could have done that any other way. I review and own every decision, but the majority of raw typing happens through agents. For a company that's [building with / betting on / already using] agents, that's a meaningful multiplier."
 
 **Variations:**
-- For Anthropic/OpenAI FDE: emphasize the "I direct agents and I can teach your customers to do the same" angle.
-- For YC/founding-engineer roles: emphasize shipping speed.
-- For AI-native SaaS: emphasize that Mason is already fluent in the product's target user's workflow.
-- For companies that don't explicitly mention AI in the JD but *should* be agent-friendly: still include this paragraph, but lead with shipping speed as the headline rather than the methodology.
+- For Anthropic / OpenAI FDE: emphasize the "I direct agents and I can teach your customers to do the same" angle.
+- For YC / founding engineer roles: emphasize shipping speed.
+- For AI native SaaS: emphasize that Mason is already fluent in the product's target user's workflow.
+- For companies that don't explicitly mention AI in the JD but *should* be agent friendly: still include this paragraph, but lead with shipping speed as the headline rather than the methodology.
 
 ### Closing paragraph — the ask, short
 

@@ -6,7 +6,7 @@
   "scripts": {
     "log": "tsx scripts/events/log.ts",
     "derive": "tsx scripts/events/derive.ts",
-    "web": "pnpm --filter web dev"
+    "dashboard": "tsx scripts/view/build.ts"
   },
   "devDependencies": {
     "@types/node": "^22.5.0",

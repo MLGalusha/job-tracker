@@ -32,6 +32,18 @@ Before running:
 
 ---
 
+## Research-backed contract (2026 updates)
+
+Rebuilt on `notes/research/resumes-2026.md` and `notes/research/SYNTHESIS.md`. Five non-negotiables:
+
+1. **Resume is an index, not the story.** Its job is to earn a click on the GitHub / demo / blog. Optimize for one-page density and project-first structure, not for comprehensive coverage.
+2. **Single column, one page** for anything under 5 YoE. Mason is 0 YoE professionally — always one page. The 1.5-page exception previously allowed is retired.
+3. **Projects-first ordering.** Selected Projects comes immediately after Summary. Skills comes after projects, not before. Education last.
+4. **JD-phrase coverage sweet spot is 50-70%, not higher.** Above 70% triggers the "too mirrored" suspicion filter on LLM screeners and human reviewers. If you catch yourself pulling more than 70% of the JD's phrases into the resume, back off — leave some of them on the table and let the projects do the talking.
+5. **Every project bullet must have a real engineering metric.** For Mason's projects (none have end-user counts), use latency, p95, eval scores, token cost, commit counts, endpoint counts, dataset size, LOC, build time, deploy frequency. **Never fake user counts.** Never invent metrics. If a project has no defensible number, that's a signal the bullet shouldn't be on the resume.
+
+---
+
 ## The truthfulness contract (READ THIS FIRST)
 
 **A tailored resume may only contain claims that trace to one of:**
@@ -78,7 +90,7 @@ Read `role.md`'s `lane` field and adapt the resume shape:
 | Lane | Summary tone | Projects to lead with | Skills emphasis | Key differentiator |
 |---|---|---|---|---|
 | `founding` | Shipping speed, solo execution, range | VTR, Staffclaw, OpenClaw | Agent-directed dev, full-stack TS, GCP | "Shipped VTR solo in 3 weeks, agent-directed" |
-| `ai-engineer` | Production AI pipelines, cost-tiered models, HITL | VTR, PianoTranscriber, Truth Engine | OpenAI API (GPT-5.4 + GPT-5.4-mini tiering), HITL, structured outputs | "Production vision pipeline on OpenAI Responses API with strict schemas and human gate" |
+| `ai-engineer` | Production AI pipelines, cost-tiered models, HITL | VTR, PianoTranscriber, SonicGen | OpenAI API (GPT-5.4 + GPT-5.4-mini tiering), HITL, structured outputs | "Production vision pipeline on OpenAI Responses API with strict schemas and human gate" |
 | `fde` | Ability to teach customers to build with agents, translation skill | VTR, OpenClaw | Agent-directed dev, reverse-engineering, customer-facing framing | "I direct agents on real production systems and could teach your customers to do the same" |
 | `fullstack-ai` | Full-stack TypeScript, AI integration, shipping | VTR, Staffclaw | TypeScript end-to-end, React 19, Express, OpenAI API | "TypeScript end to end, AI in production" |
 | `local-raleigh` | Shipping work, bootcamp + local context | VTR, Staffclaw, PianoTranscriber | Full-stack, bootcamp, local | Softer on agent-directed angle unless the company signals it's agent-friendly |
@@ -116,29 +128,69 @@ From `profile/skills.md` Tier A and Tier B, pick the subset that maps to this JD
 
 For any project you link, the link URL comes from `profile/repos.md`:
 - **VTR** — link `voicesthatremain.com`, never the repo
-- **Staffclaw** — link the public GitHub repo
+- **Staffclaw** — link the public GitHub repo. **The Staffclaw narrative arc is fixed and important. Lead with it in this exact order:**
+  1. **OpenClaw mapped all 92 Teamworxs API endpoints in one agent session** — including the manager and owner endpoints Mason had no access to as a cook, with full request/response shapes. This is the *enabling* discovery.
+  2. **Reverse-engineered the entire app, not just the employee side** — Mason set out to rebuild Teamworxs's manager schedule editor too, using only the discovered API surface.
+  3. **Drop-in replacement architecture** (this is the killer signal): Staffclaw is a transparent client over Teamworxs's actual backend. Users log in with their real Teamworxs credentials, Staffclaw stores the Teamworxs session cookie, every read/write proxies through Teamworxs's API on the user's own cookie. **Migration cost from Teamworxs to a finished Staffclaw would be literally zero — log in with the credentials you already have, no data export, no company onboarding.** Verified in `server/src/routes/auth.ts` and `server/src/services/teamworxs.ts`.
+  4. **Multi-source external APIs as input for an auto-scheduler** — Alamo Drafthouse public showtime/ticket data, weather APIs, local-events data, history analyzer. The auto-scheduler is the hard unsolved problem; the multi-source data layer exists to feed it, not as a vanity dashboard. Verified in `services/alamo.ts`, `services/weather.ts`, `services/showtime-poller.ts`, `services/history-analyzer.ts`, `routes/demand.ts`, `cron/weather-fetcher.ts`.
+  5. **Paused when VTR took priority.**
+
+  **Do NOT lead Staffclaw with "I built a schedule dashboard" or "I built a pre-shift briefing." The pre-shift briefing is a byproduct.** The architecture (drop-in replacement via credential proxying) and the discovery (full API surface including manager-side via agent) are the parts that prove unique technical thinking.
 - **PianoTranscriber** — link the public GitHub repo
-- **SonicGen** (Truth Engine public snapshot) — link the public GitHub repo
+- **SonicGen** — link the public GitHub repo (`github.com/MLGalusha/SonicGen`). Standalone audio dedup engine. Use the **"written by hand, no coding agents"** framing as a counter to "only ships via agents" interview objections — this is one of SonicGen's most valuable signals.
 - **job-tracker** — link only if the JD mentions agent-directed work explicitly
-- **OpenClaw, Truth Engine (private), line-finder** — **no link**. Reference in prose only if relevant.
+- **OpenClaw, the private `truth-engine` dev repo, line-finder** — **no link**. Reference in prose only if relevant. (For SonicGen, always link the public `MLGalusha/SonicGen` repo, never the private `truth-engine` dev repo it was developed in.)
 
 If you catch yourself writing a URL that isn't in `repos.md`, stop and re-check.
 
 ### 7. Length discipline
 
-- **Default target: one page.** A junior-to-mid resume should not be two pages.
-- **Exception:** if the role is explicitly senior and `role.md` indicates the hiring bar wants deep evidence, you may go to 1.5 pages. Never more.
-- **Cut first:** the Background note about the cooking job. It's in `resume-base.md` as a narrative element, but many resumes should omit it entirely. Include it only if the lane is `local-raleigh` or if Mason explicitly wants it in.
-- **Education stays short.** Bootcamp + CS50. No fluff.
+- **Hard target: one page. Single column.** No exceptions for Mason's current experience level.
+- **Projects-first structure.** Summary → Selected Projects → Skills → Education. Do not reorder.
+- **Cut first:** the Background note about the cooking job. Include only if the lane is `local-raleigh` or Mason explicitly wants it in.
+- **Education stays short.** Bootcamp + CS50. No fluff. No "6-month intensive" credential-padding per voice.md rule 3.
 
-### 8. Voice audit
+### 7.5. JD coverage cap check
 
-Before writing the file, scan your draft against `profile/voice.md`:
-- No banned phrases ("passionate", "rockstar", "synergy", "leverage" as verb, "extensive experience", "helped build" when Mason built it, etc.)
-- First person, declarative — "I built", "I designed", not "Responsible for"
-- Concrete numbers, not adjectives
-- No self-deprecation
-- Agent-directed framed as a capability, never a caveat
+After drafting bullets and the skills section, count the JD phrases you've echoed back in the resume. If coverage is **above 70%**, pull some back. The research calls this the "too mirrored" suspicion filter — reviewers and LLM screeners both flag resumes that read like a JD restatement. Target 50-70% coverage. Leave some JD phrases on the table deliberately and let the lead project do the talking.
+
+If coverage is **below 40%**, the lane is wrong and you should flag that to Mason before continuing.
+
+### 7.6. Engineering metrics check
+
+Scan every project bullet. Each one should have a concrete engineering number. Acceptable number shapes for Mason's projects:
+- Commit counts, LOC, endpoint counts, dataset size (bytes, rows, files)
+- Latency (ms, p95), eval scores, model accuracy, token cost
+- Build time, cold-start time, deploy frequency
+- Time budget ("shipped in 3 weeks"), solo-execution claim
+
+**Unacceptable numbers for Mason's projects:**
+- User counts for projects without real users
+- "Increased X by Y%" when there's no baseline
+- "Processed N records" when N is fabricated
+- Any round number that isn't traceable to profile files
+
+If a bullet has no defensible number, either find one from `wins.md` / `projects/*.md` or cut the bullet.
+
+### 8. Voice audit (blocking)
+
+Before writing the file, scan your draft against `profile/voice.md`. Blocking violations:
+
+- Any banned phrase from rule 3 (*passionate, rockstar, synergy, extensive experience, helped build, strong fundamentals, results-oriented, self-starter, capstone, intensive* in credential-padding context)
+- **Any word from rule 15's banned LLM vocabulary** (*leveraged, spearheaded, delve, seamless, robust, cutting-edge, state-of-the-art, tech-savvy, adept, pivotal, tapestry, ecosystem, empower, foster, streamline, game-changing, best-in-class, world-class, transformative, innovative* without concrete justification, *disrupt*, etc.)
+- Any em-dash in a sentence (rule 14) — acceptable only in headers and date ranges
+- Any stacked hyphen compound adjective (rule 14)
+- Any approximation tilde (rule 14)
+- Any pipeline arrow in prose (rule 14)
+- Any brand-name drop in bullet prose (rule 12) — brand names belong in the Skills section only
+- Any framing that makes Mason sound like he builds LLM infrastructure (rule 11)
+- Any AI-washing of Mason's projects (rule 18)
+- Any self-deprecation (rule 9)
+- Agent-directed framed as a caveat instead of a capability (rule 4)
+- Any summary sentence that spends more than ~10 words describing a single project (rule 13)
+- Any bullet that uses "Responsible for" instead of a first-person declarative verb
+
+When a violation is found, rewrite the whole bullet. Don't patch.
 
 ### 9. Write the file
 
@@ -156,13 +208,15 @@ Raleigh, NC · masonlgalusha.careers@gmail.com · 304-546-5850
 
 ## Selected projects
 
-### <Project 1> — <role> — <year>
+### <Project Name> — <year>
 **<link>** · <one-line framing>
 - <bullet with concrete verb + number>
 - <bullet>
 - <bullet>
 
-### <Project 2> — ...
+### <Project 2> — <year>
+
+**Title format rule:** project headers are **just the project name and the year** — no "Solo builder," no "Solo builder + architect," no "Primary builder," no "(UNC Chapel Hill AI bootcamp capstone)." Keep it minimal: `### <Name> — <year>`. Solo / role information belongs in the body of the bullets if it matters at all, not in the header.
 
 ## Skills
 

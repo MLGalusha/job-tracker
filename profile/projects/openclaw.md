@@ -3,7 +3,7 @@
 **Repo:** `~/Workspace/projects/google-api-tools/` (personal, not currently public). The directory is literally named `google-api-tools` because it also contains a separate Gmail + Calendar OAuth experiment (`auth.js`, `credentials.json`, `token.json`) that's unrelated to OpenClaw — two experiments sharing a folder. OpenClaw-specific state lives in `~/.openclaw/` (Discord token, 4-hour TW session cache, shift-briefing dedup state).
 **Status:** Shipped (for personal daily use). Parent project of Staffclaw.
 **Role:** Solo builder + architect
-**Timeline:** 2025 (predates Staffclaw)
+**Timeline:** Early 2026 (same period as Staffclaw — OpenClaw is the agent-reconnaissance layer Mason used to build Staffclaw, not a separate earlier project)
 
 ## One-liner
 A personal agent setup that reverse-engineered the undocumented Teamworxs scheduling API and the Alamo Drafthouse ticketing site, then delivered Mason a daily Discord summary of his upcoming shift — who he's working with, what movies are playing, which shows are busiest, when mids leave — one hour before clock-in.
