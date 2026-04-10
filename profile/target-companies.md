@@ -23,7 +23,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: ai-engineer, fullstack-ai
 - priority: top
 - notes: Already applied April 9, 2026 for AI Rust Engineer on the AI Foundations / DeltaDB team. Watch for new openings on the same team.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Anthropic
 - slug: anthropic
@@ -32,7 +32,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fde, ai-engineer
 - priority: top
 - notes: FDE is the primary lane. Research team and product engineering are off-lane. Rolling hiring, high volume, watch for new FDE postings specifically.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### OpenAI
 - slug: openai
@@ -41,7 +41,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fde, ai-engineer
 - priority: top
 - notes: Applied AI and Forward Deployed are the primary lanes. Research track is off-lane.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Cognition
 - slug: cognition
@@ -50,7 +50,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: ai-engineer, fullstack-ai, founding
 - priority: top
 - notes: Makers of Devin. Small team, agent-native stack, exactly Mason's differentiator. Worth a tailored apply any time a generalist role opens.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Cursor (Anysphere)
 - slug: anysphere-cursor
@@ -179,7 +179,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai
 - priority: long-tail
 - notes: Established product-led companies with occasional openings that fit. Group entry for now; split out when a specific role surfaces.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Y Combinator batch companies (via workatastartup.com)
 - slug: yc-wasu
@@ -187,7 +187,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: founding, ai-engineer, fullstack-ai
 - priority: mid
 - notes: Not a single company. The sourcer should scan workatastartup.com filtered by lane and surface new postings from companies under about 30 people. Highest expected yield of any single source for founding engineer roles.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ---
 

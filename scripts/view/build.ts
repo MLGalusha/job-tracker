@@ -468,6 +468,20 @@ const renderBundle = (b: AppBundle) => {
     ${artifact ? renderArtifactBlock(artifact) : ""}
     ${renderOutreachBlock(outreach)}
 
+    ${(() => {
+      const sgPath = join(repoRoot, "applications", app.id, "study-guide.md");
+      const hasStudyGuide = existsSync(sgPath);
+      return `
+      <div class="block">
+        <div class="block-head">
+          <span class="block-label">study guide</span>
+          ${hasStudyGuide
+            ? `<span class="badge" style="background:#34a853">ready</span>`
+            : `<span class="badge" style="background:#9aa0a6">not generated</span>`}
+        </div>
+      </div>`;
+    })()}
+
     ${
       eventRows
         ? `<details><summary>${appEvents.length} event${appEvents.length === 1 ? "" : "s"}</summary><table><thead><tr><th>time</th><th>type</th><th>payload</th></tr></thead><tbody>${eventRows}</tbody></table></details>`
@@ -475,6 +489,42 @@ const renderBundle = (b: AppBundle) => {
     }
   </section>`;
 };
+
+// ---------- study guides ----------
+
+type StudyGuide = { project: string; file: string };
+
+const projectsDir = join(repoRoot, "profile", "projects");
+const studyGuides: StudyGuide[] = [];
+const projectsWithoutGuides: string[] = [];
+
+if (existsSync(projectsDir)) {
+  const allProjectFiles = readdirSync(projectsDir).filter(
+    (f) => f.endsWith(".md") && !f.endsWith("-study.md")
+  );
+  const studyFiles = readdirSync(projectsDir).filter((f) => f.endsWith("-study.md"));
+
+  for (const sf of studyFiles) {
+    const name = sf.replace(/-study\.md$/, "");
+    const displayName = name
+      .split("-")
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join("");
+    studyGuides.push({ project: displayName, file: sf });
+  }
+
+  const studyBasenames = new Set(studyFiles.map((f) => f.replace(/-study\.md$/, "")));
+  for (const pf of allProjectFiles) {
+    const basename = pf.replace(/\.md$/, "");
+    if (!studyBasenames.has(basename)) {
+      const displayName = basename
+        .split("-")
+        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+        .join("");
+      projectsWithoutGuides.push(displayName);
+    }
+  }
+}
 
 const statusSummary = Array.from(statusCounts.entries())
   .map(([s, n]) => `<li>${statusBadge(s)} <strong>${n}</strong></li>`)
@@ -661,6 +711,14 @@ const html = `<!doctype html>
   <p class="muted">${applications.length} application${applications.length === 1 ? "" : "s"} / ${events.length} event${events.length === 1 ? "" : "s"}</p>
 
   <ul class="status-summary">${statusSummary || "<li><span class='muted'>No applications yet.</span></li>"}</ul>
+
+  <h2>Project Study Guides</h2>
+  ${studyGuides.length > 0
+    ? `<ul class="status-summary">${studyGuides.map((sg) => `<li><span class="badge" style="background:#34a853">ready</span> <a href="../../profile/projects/${esc(sg.file)}">${esc(sg.project)}</a></li>`).join("")}</ul>`
+    : `<p class="muted">No study guides yet.</p>`}
+  ${projectsWithoutGuides.length > 0
+    ? `<ul class="status-summary">${projectsWithoutGuides.map((p) => `<li><span class="badge" style="background:#9aa0a6">missing</span> ${esc(p)}</li>`).join("")}</ul>`
+    : ""}
 
   <h2>Pipeline</h2>
   ${sortedBundles.length === 0 ? "<p class='muted'>No applications yet.</p>" : sortedBundles.map(renderBundle).join("")}

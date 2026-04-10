@@ -7,13 +7,15 @@
     "source": "direct",
     "status": "interested",
     "created_at": "2026-04-09T11:03:52.028Z",
-    "updated_at": "2026-04-09T14:30:05.049Z",
+    "updated_at": "2026-04-10T05:32:24.320Z",
     "last_status_change": "2026-04-09T11:03:52.028Z",
     "status_history": [],
     "artifacts": {
       "resume": "applications/2026-04-09-zed-industries-ai-rust-engineer/resume-gaps.md",
       "research": "applications/2026-04-09-zed-industries-ai-rust-engineer/company.md",
-      "cover_letter": "applications/2026-04-09-zed-industries-ai-rust-engineer/cover-letter.md"
+      "artifact": "applications/2026-04-09-zed-industries-ai-rust-engineer/artifact.md",
+      "outreach": "applications/2026-04-09-zed-industries-ai-rust-engineer/outreach/nathan-sobo.md",
+      "study_guide": "applications/2026-04-09-zed-industries-ai-rust-engineer/study-guide.md"
     },
     "notes": []
   }
