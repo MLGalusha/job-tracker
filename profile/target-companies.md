@@ -72,7 +72,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai, ai-engineer
 - priority: mid
 - notes: Agent product engineer roles are the fit.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Vercel
 - slug: vercel
@@ -81,7 +81,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai, ai-engineer
 - priority: mid
 - notes: v0 and AI SDK roles are the fit. Broader platform roles tend to want production experience Mason doesn't have yet.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Sourcegraph
 - slug: sourcegraph
@@ -89,8 +89,8 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - careers: https://sourcegraph.com/jobs
 - lanes: ai-engineer, fullstack-ai
 - priority: mid
-- notes: Cody team and agent work.
-- last_scanned:
+- notes: Cody team and agent work. Minimal engineering openings as of April 2026 scan.
+- last_scanned: 2026-04-10
 
 ### Supabase
 - slug: supabase
@@ -99,7 +99,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai, founding
 - priority: mid
 - notes: Mason used Supabase on PianoTranscriber before moving to Google Cloud for VTR. Product engineering roles fit.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Linear
 - slug: linear
@@ -108,7 +108,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai
 - priority: mid
 - notes: Small product-led team, high bar. Watch for product engineer openings.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### LangChain
 - slug: langchain
@@ -117,7 +117,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: ai-engineer, fullstack-ai
 - priority: mid
 - notes: Applied AI and product engineering roles fit.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Perplexity
 - slug: perplexity
@@ -125,7 +125,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - careers: https://perplexity.ai/careers
 - lanes: ai-engineer, fullstack-ai
 - priority: mid
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Harvey
 - slug: harvey
@@ -134,7 +134,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fde, ai-engineer
 - priority: mid
 - notes: Vertical AI in legal. FDE lane and applied AI roles fit.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Sierra
 - slug: sierra
@@ -143,7 +143,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fde, ai-engineer
 - priority: mid
 - notes: Bret Taylor's agent company. FDE lane fits.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Decagon
 - slug: decagon
@@ -151,7 +151,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - careers: https://decagon.ai/careers
 - lanes: fde, ai-engineer
 - priority: mid
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ### Hebbia
 - slug: hebbia
@@ -159,7 +159,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - careers: https://hebbia.com/careers
 - lanes: fde, ai-engineer
 - priority: mid
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ---
 
