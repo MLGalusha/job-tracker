@@ -59,7 +59,7 @@ The watchlist for `job-sourcer`. Each entry is a company worth scanning for new 
 - lanes: fullstack-ai, ai-engineer
 - priority: top
 - notes: Agent-native editor, product engineering roles fit Mason directly. Competes with Zed on editor, so the framing for a cover letter shifts if applying to both.
-- last_scanned:
+- last_scanned: 2026-04-10
 
 ---
 
