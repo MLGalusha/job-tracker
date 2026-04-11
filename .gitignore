@@ -22,6 +22,7 @@ Thumbs.db
 # Build artifacts
 web/dist/
 *.tsbuildinfo
+notes/audio/*-parts/
 
 # Local-only Claude state
 .claude/settings.local.json
